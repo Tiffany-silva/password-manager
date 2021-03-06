@@ -2,26 +2,34 @@
   <img class="img-logo" src="assets/logo.png">
 </div>
 <mat-divider class="divider"></mat-divider>
-<form class="form-class">
-  <h1 class="heading">Login</h1>
-  <mat-form-field class="form-field" appearance="outline">
-    <mat-label>Username</mat-label>
-    <input matInput type="text" placeholder="Username">
-  </mat-form-field>
-  <mat-form-field class="form-field" appearance="outline">
-    <mat-label>Password</mat-label>
-    <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'">
-    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-            [attr.aria-pressed]="hide">
-      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-    </button>
-  </mat-form-field>
-  <div align="center">
-    <button class="btn" mat-raised-button color="primary">Login</button>
+<div class="float-container">
+  <div class="float-image">
+    <img src="assets/pic3.png">
   </div>
-  <div class="signupbtn" align="center">
-    <a href="">Sign up instead?</a>
+  <div class="float-child">
+    <form class="form-class">
+      <h1 class="heading">Login</h1>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label>Username</mat-label>
+        <input matInput type="text" placeholder="Username">
+      </mat-form-field>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+      <div align="center">
+        <button class="btn" mat-raised-button color="primary">Login</button>
+      </div>
+      <div class="signupbtn" align="center">
+        <a href="">Sign up instead?</a>
+      </div>
+    </form>
   </div>
-</form>
+</div>
+
 
 
