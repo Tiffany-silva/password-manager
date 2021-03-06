@@ -1,9 +1,8 @@
-
 <div class="float-container">
   <div class="float-child">
-      <img class="image-reg" src="assets/pass.png" alt="Pass Keeper">
+    <img class="image-reg" src="assets/pass.png" alt="Pass Keeper">
   </div>
-  <div  class="float-child">
+  <div class="float-child">
     <form class="form-class">
       <h1 class="heading">Sign Up</h1>
       <mat-form-field class="form-field" appearance="outline">
@@ -22,7 +21,6 @@
           <input matInput type="text" placeholder="Last Name">
         </mat-form-field>
       </div>
-
       <mat-form-field class="form-field" appearance="outline">
         <mat-label>Email</mat-label>
         <input matInput type="email" placeholder="Email">
@@ -30,21 +28,22 @@
       <mat-form-field class="form-field" appearance="outline">
         <mat-label>Master Password</mat-label>
         <input matInput placeholder="Master Password" [type]="hide ? 'password' : 'text'">
-        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
-        <mat-hint>Must include at least an Uppercase, Lowercase, Symbol and 8 minimum characters </mat-hint>
+        <mat-hint>Must include at least an Uppercase, Lowercase, Symbol and 8 minimum characters</mat-hint>
       </mat-form-field>
       <mat-form-field class="form-field" appearance="outline">
         <mat-label>Confirm Master Password</mat-label>
         <input matInput placeholder="Confirm Master Password" [type]="hideConfirm ? 'password' : 'text'">
-        <button mat-icon-button matSuffix (click)="hideConfirm = !hideConfirm" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hideConfirm">
+        <button mat-icon-button matSuffix (click)="hideConfirm = !hideConfirm" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hideConfirm">
           <mat-icon>{{hideConfirm ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>    <!--  <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>-->
       </mat-form-field>
     </form>
   </div>
-
-  </div>
+</div>
 
 
