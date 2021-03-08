@@ -8,12 +8,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {AngularMaterialModule} from './angular-material.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { LoginComponent } from './UI-pages/login/login.component';
+import { HomeComponent } from './UI-pages/home/home.component';
+import {CryptoService} from './Services/crypto.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,7 @@ import { LoginComponent } from './UI-pages/login/login.component';
     ReactiveFormsModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [CryptoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
