@@ -1,0 +1,36 @@
+<div >
+  <img class="logo" src="assets/title.png">
+</div>
+<mat-divider></mat-divider>
+
+<mat-tab-group class="tab-class">
+  <mat-tab label="Social Media">
+    <mat-selection-list dense [multiple]="false">
+      <mat-list-option (click)="showPassword(entry.site)" *ngFor="let entry of socialEntries" [value]="entry">
+        <p mat-line class="site"> {{entry.site}} </p>
+        <p matLine class="username"> {{entry.username}} </p>
+        <mat-divider></mat-divider>
+      </mat-list-option>
+    </mat-selection-list>
+    <mat-paginator [pageSizeOptions]="[2, 4]"></mat-paginator>
+
+  </mat-tab>
+  <mat-tab label="Bank Accounts">
+    <mat-selection-list dense [multiple]="false">
+      <mat-list-option (click)="showPassword(entry.site)" *ngFor="let entry of bankAccountEntries" [value]="entry">
+        <p mat-line class="site"> {{entry.site}} </p>
+        <p matLine class="username"> {{entry.username}} </p>
+        <mat-divider></mat-divider>
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-tab>
+  <mat-tab label="Emails">
+    <mat-selection-list dense [multiple]="false">
+      <mat-list-option (click)="showPassword(entry.site)" *ngFor="let entry of emailEntries" [value]="entry">
+        <p mat-line class="site"> {{entry.site}} </p>
+        <p matLine class="username"> {{entry.username}} </p>
+        <mat-divider></mat-divider>
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-tab>
+</mat-tab-group>
