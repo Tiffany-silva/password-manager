@@ -1,5 +1,6 @@
+
 .logo{
-  width: 30%;
+  width: 60%;
   padding-top: 2%;
   padding-left: 1%;
   padding-bottom: 1%;
@@ -14,4 +15,22 @@
 
 .username{
   color: #413f3f;
+}
+
+.no-entries{
+  color: #858282;
+  padding: 2%;
+}
+
+.logout{
+  margin-left: 45%;
+  margin-top: 2%;
+}
+
+.heading{
+  display: flex;
+}
+
+.list{
+  padding-left: 1.5%;
 }
