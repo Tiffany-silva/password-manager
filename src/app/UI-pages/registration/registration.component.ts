@@ -10,8 +10,8 @@ import {Router} from '@angular/router';
 })
 export class RegistrationComponent implements OnInit {
 
-  hide = true;
-  hideConfirm = true;
+  hide:boolean= true;
+  hideConfirm:boolean = true;
   errorMessage:any;
   registerForm: FormGroup;
   constructor(private formBuilder: FormBuilder, private authService: AuthService, private router:Router) { }
