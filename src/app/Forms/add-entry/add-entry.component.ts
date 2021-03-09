@@ -53,16 +53,13 @@ export class AddEntryComponent implements OnInit {
 		return password === passwordConfirm ? null : {passwordsNotEqual: true};
 	}
 
-
 	encrypted(password: any) {
 		let encrypted = this.cryptoService.set(cryptoKey, password);
 		return encrypted;
 	}
 
 	onSubmit(values: any) {
-		console.log(this.selected.value.id);
 		let encrypt = this.encrypted(values.password);
-		console.log(encrypt);
 		let entry = {
 			username: values.username,
 			password: encrypt,
@@ -73,7 +70,6 @@ export class AddEntryComponent implements OnInit {
 
 
 		this.entry.createEntry(entry).subscribe(data => {
-			console.log('im hereeee');
 			this.router.navigate(['/home']).then(() => {
 				window.location.reload();
 			});

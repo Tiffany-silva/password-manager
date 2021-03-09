@@ -1,55 +1,55 @@
 <div class="heading">
-  <div>
-    <img class="logo" src="assets/title.png">
-  </div>
-  <button class="logout" mat-icon-button aria-label="logout" (click)="logout()">
-    <mat-icon>logout</mat-icon>
-  </button>
- </div>
+	<div>
+		<img class="logo" src="assets/title.png">
+	</div>
+	<button class="logout" mat-icon-button aria-label="logout" (click)="logout()">
+		<mat-icon>logout</mat-icon>
+	</button>
+</div>
 
 <mat-divider></mat-divider>
 
 <mat-tab-group class="tab-class">
-  <mat-tab label="Social Media">
-    <div class="no-entries" *ngIf="socialEntries.length==0">
-      No Entries
-    </div>
-    <mat-selection-list dense [multiple]="false" class="list">
-      <mat-list-option (click)="showPassword(entry)" *ngFor="let entry of socialEntries" [value]="entry">
-        <p mat-line class="site"> {{entry.site}} </p>
-        <p matLine class="username"> {{entry.username}} </p>
-        <mat-divider></mat-divider>
-      </mat-list-option>
-    </mat-selection-list>
-  </mat-tab>
-  <mat-tab label="Bank Accounts">
-    <div class="no-entries" *ngIf="bankAccountEntries.length==0">
-      No Entries
-    </div>
-    <mat-selection-list dense [multiple]="false">
-      <mat-list-option (click)="showPassword(entry)" *ngFor="let entry of bankAccountEntries" [value]="entry">
-        <p mat-line class="site"> {{entry.site}} </p>
-        <p matLine class="username"> {{entry.username}} </p>
-        <mat-divider></mat-divider>
-      </mat-list-option>
-    </mat-selection-list>
-  </mat-tab>
-  <mat-tab label="Emails">
-    <div class="no-entries" *ngIf="emailEntries.length==0">
-      No Entries
-    </div>
-    <mat-selection-list dense [multiple]="false">
-      <mat-list-option (click)="showPassword(entry)" *ngFor="let entry of emailEntries" [value]="entry">
-        <p mat-line class="site"> {{entry.site}} </p>
-        <p matLine class="username"> {{entry.username}} </p>
-        <mat-divider></mat-divider>
-      </mat-list-option>
-    </mat-selection-list>
-  </mat-tab>
-  <mat-tab>
-    <ng-template mat-tab-label>
-      <mat-icon color="primary"> add </mat-icon>
-    </ng-template>
-    <app-add-entry></app-add-entry>
-  </mat-tab>
+	<mat-tab label="Social Media">
+		<div class="no-entries" *ngIf="socialEntries.length==0">
+			No Entries
+		</div>
+		<mat-selection-list dense [multiple]="false" class="list">
+			<mat-list-option (click)="showPassword(entry)" *ngFor="let entry of socialEntries" [value]="entry">
+				<p mat-line class="site"> {{entry.site}} </p>
+				<p matLine class="username"> {{entry.username}} </p>
+				<mat-divider></mat-divider>
+			</mat-list-option>
+		</mat-selection-list>
+	</mat-tab>
+	<mat-tab label="Bank Accounts">
+		<div class="no-entries" *ngIf="bankAccountEntries.length==0">
+			No Entries
+		</div>
+		<mat-selection-list dense [multiple]="false">
+			<mat-list-option (click)="showPassword(entry)" *ngFor="let entry of bankAccountEntries" [value]="entry">
+				<p mat-line class="site"> {{entry.site}} </p>
+				<p matLine class="username"> {{entry.username}} </p>
+				<mat-divider></mat-divider>
+			</mat-list-option>
+		</mat-selection-list>
+	</mat-tab>
+	<mat-tab label="Emails">
+		<div class="no-entries" *ngIf="emailEntries.length==0">
+			No Entries
+		</div>
+		<mat-selection-list dense [multiple]="false">
+			<mat-list-option (click)="showPassword(entry)" *ngFor="let entry of emailEntries" [value]="entry">
+				<p mat-line class="site"> {{entry.site}} </p>
+				<p matLine class="username"> {{entry.username}} </p>
+				<mat-divider></mat-divider>
+			</mat-list-option>
+		</mat-selection-list>
+	</mat-tab>
+	<mat-tab>
+		<ng-template mat-tab-label>
+			<mat-icon color="primary"> add</mat-icon>
+		</ng-template>
+		<app-add-entry></app-add-entry>
+	</mat-tab>
 </mat-tab-group>
