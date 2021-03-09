@@ -9,14 +9,18 @@ import {AngularMaterialModule} from './angular-material.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { LoginComponent } from './UI-pages/login/login.component';
 import { HomeComponent } from './UI-pages/home/home.component';
-import {CryptoService} from './Services/crypto.service';
+import {CryptoService} from './Services/cryto/crypto.service';
+import { AddEntryComponent } from './Forms/add-entry/add-entry.component';
+import {HttpClientModule} from '@angular/common/http';
+import { authInterceptorProviders} from './helpers/auth.interceptor';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    AddEntryComponent
   ],
   imports: [
     BrowserModule,
@@ -24,9 +28,10 @@ import {CryptoService} from './Services/crypto.service';
     AngularMaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
-  providers: [CryptoService],
+  providers: [CryptoService, authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
